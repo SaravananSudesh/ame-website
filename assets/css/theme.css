@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/orbitron.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nasalization';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/nasalization.ttf);
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@keyframes animate-fade {
+    0% {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: -webkit-linear-gradient(315deg,hsla(0, 50%, 25%, 0.4) 0%,hsla(0,0%,0%,.4) 52%,hsla(0, 50%, 25%, 0.4) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(228, 190, 98, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 10px 20px #0003;
+    border-radius: 2px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(228, 190, 98, 0.4);
+}
+
+body{
+    font-family: "Orbitron", sans-serif;
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+/* Background Cover */
+.ame-cover {
+    position: relative;
+    background-color: black;
+    height: calc(100vh);
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+.ame-cover video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+  
+.ame-cover .cover-background-content {
+    position: relative;
+    z-index: 2;
+    overflow-y: auto;
+}
+
+.cover-background-content{
+    scrollbar-color: rgba(228, 190, 98, 0.6) -webkit-linear-gradient(315deg,hsla(0, 50%, 25%, 0.4) 0%,hsla(0,0%,0%,.4) 52%,hsla(0, 50%, 25%, 0.4) 100%);
+    scrollbar-width: thin;
+}
+  
+.ame-cover .cover-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+/* Navbar */
+.ame-navbar{
+    background-color: transparent;
+    
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.ame-navbar-toggler{
+    padding: 0.2rem 0.2rem;
+    font-size: 32px;
+    line-height: 1;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 32px;
+    transition: 0.3s;
+}
+
+.navbar-brand{
+    transform: translateY(12px);
+}
+
+.ame-navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.ame-navbar-toggler-icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    background-image: url("/assets/img/theme/menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+
+.ame-nav-link{
+    display: block;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 1rem;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Nasalization";
+    color: #fff;
+    text-decoration: none;
+    background: 0 0;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s;
+    
+}
+
+.ame-nav-link:hover, .ame-nav-link.active{
+    border-bottom: 4px solid #fff;
+}
+
+.ame-event-square-button{
+    width: 100%;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.5rem;
+    background: -webkit-linear-gradient(315deg,rgba(96, 73, 32, 0.4) 0%,rgba(0, 0, 0, 0.4) 52%,rgba(96, 73, 32, 0.4) 100%);
+    transition: 0.3s;
+}
+
+.ame-event-square-button:hover, .ame-event-square-button:focus, .ame-event-square-button:active{
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.ame-formula-card{
+    background: -webkit-linear-gradient(315deg,hsla(0, 50%, 25%, 0.4) 0%,hsla(0,0%,0%,.4) 52%,hsla(0, 50%, 25%, 0.4) 100%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px #0003;
+    padding: 0px;
+    border-radius: 0px;
+    transition: 0.3s;
+    color: #fff;
+
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.ame-formula-card .ame-formula-card-head{
+    padding: 4px 12px;
+    background: -webkit-linear-gradient(315deg,rgba(96, 73, 32, 0.4) 0%,rgba(0, 0, 0, 0.4) 52%,rgba(96, 73, 32, 0.4) 100%);
+}
+
+.ame-formula-card .ame-formula-card-head .number-badge{
+    color: #000;
+    background-color: #fff;
+    border-radius: 0;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    font-size: 20px;
+    border-bottom-right-radius: 4px;
+}
+
+.ame-formula-card .ame-formula-card-head .ame-formula-head-text{
+    font-size: 20px;
+    text-transform: uppercase;
+    border-left: 2px solid #e4be62;
+    margin-left: 8px;
+    padding-left: 8px;
+}
+
+.ame-formula-countdown-wrapper{
+    text-align: center;
+    padding: 16px;
+    min-height: 80px;
+
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.ame-formula-countdown{
+    font-size: 32px;
+    transition: 0.3s;
+
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.ame-card{
+    background: -webkit-linear-gradient(315deg,hsla(0, 50%, 25%, 0.4) 0%,hsla(0,0%,0%,.4) 52%,hsla(0, 50%, 25%, 0.4) 100%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px #0003;
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.3s;
+    color: #fff;
+
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.ame-card-event-title{
+    font-size: 24px;
+    font-weight: 600;
+    font-family: "Nasalization";
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
+    line-height: 2.5rem;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.ame-card-button{
+    background-color: #d0a979;
+    border-radius: 12px;
+}
+
+.ame-card-button:hover, .ame-card-button:focus, .ame-card-button:active{
+    color: #fff;
+    background-color: #982f2f;
+}
+
+.ame-title-card{
+    background: -webkit-linear-gradient(315deg,hsla(0, 50%, 25%, 0.4) 0%,hsla(0,0%,0%,.4) 52%,hsla(0, 50%, 25%, 0.4) 100%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px #0003;
+    padding: 8px;
+    border-radius: 20px;
+    transition: 0.3s;
+    color: #fff;
+
+    animation-duration: 0.5s;
+    animation-name: animate-fade;
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.ame-card-image-link{
+    transition: 0.3s;
+}
+
+.ame-card-image-link:hover{
+    transform: translateY(-4px);
+}
+
+.ame-card-heading{
+    margin: 0;
+    font-weight: 800;
+    font-family: "Nasalization";
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.ame-about-heading{
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.ame-about-text{
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.ame-about-cheer{
+    color: #e4be62;
+    font-weight: 600;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.modal.ame-modal.fade:not(.show) .modal-dialog {
+    transform: scale(0.8);
+}
+
+.ame-modal-content{
+    background: -webkit-linear-gradient(315deg,hsla(0, 50%, 25%, 0.4) 0%,hsla(0,0%,0%,.4) 52%,hsla(0, 50%, 25%, 0.4) 100%);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px #0003;
+    border-radius: 16px;
+    transition: 0.3s;
+}
+
+.ame-contact-card-highlight{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.ame-contact-card-highlight .contact-link{
+    color:#fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.ame-contact-card-desc{
+    text-align: center;
+    color: #e4be62;
+}
