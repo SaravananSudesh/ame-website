@@ -152,8 +152,33 @@ body{
     
 }
 
-.ame-nav-link:hover, .ame-nav-link.active{
-    border-bottom: 4px solid #fff;
+.ame-nav-link {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+}
+.ame-nav-link:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background: #fff;
+    height: 4px;
+    -webkit-transition-property: right;
+    transition-property: right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.ame-nav-link:hover:before, .ame-nav-link:focus:before, .ame-nav-link:active:before, .ame-nav-link.active:before {
+    right: 0;
 }
 
 .ame-event-square-button{
