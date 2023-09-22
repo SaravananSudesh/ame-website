@@ -1,0 +1,76 @@
+@font-face {
+    font-family: ds-digi;
+    src: url(/assets/fonts/DS-DIGI.ttf);
+}
+
+.speedometer-wrapper-desktop{
+    z-index: 3;
+    scale: 0.65;
+    opacity: 90%;
+    position: fixed;
+    right: 360px;
+    bottom: 360px;
+}
+
+.speedometer-wrapper-mobile{
+    scale: 0.5;
+    opacity: 90%;
+    position: fixed;
+    margin-left: calc(28% - 28px);
+    margin-right: auto;
+    bottom: 300px;
+}
+
+.speedometer{
+    position: absolute;
+    background-image: url(/assets/img/speedometer/speedometer.png);
+    background-size: cover;
+    height: 480px;
+    width: 480px;
+}
+
+.needle{
+    position: absolute;
+    background-image: url(/assets/img/speedometer/needle.png);
+    background-size: cover;
+    height: 480px;
+    width: 480px;
+    transition: 10s;
+    transition-timing-function: ease-out;
+}
+
+.trip{
+    position: absolute;
+    font-family: ds-digi;
+    font-size: 26px;
+    margin-left: 145px;
+    margin-top: 336px;
+    text-align: right;
+    display: flex;
+    transition: 0.3s;
+}
+
+.trip .number{
+    background-image: url(/assets/img/speedometer/trip.png);
+    background-size: cover;
+    padding: 2px 4px;
+    text-align: center;
+    margin: 2px;
+    transition: 0.3s;
+    width: 27px;
+    font-size: 24px;
+}
+
+.trip-desc{
+    position: absolute;
+    display: flex;
+    margin-left: 145px;
+    margin-top: 375px;
+}
+
+.trip-desc .desc{
+    margin: 2px 14px;
+    color: aliceblue;
+    text-align: center;
+    font-family: "Times New Roman";
+}

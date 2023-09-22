@@ -7,6 +7,7 @@
     <link rel="icon" type="image/ico" href="favicon.ico">
     <link href="assets/bootstrap/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/speedometer.css" rel="stylesheet">
   </head>
   <body>
    <main>
@@ -49,25 +50,40 @@
               </nav>
           </header>
           <section>
-            <div class="container p-3 p-md-5" style="margin-top: 37vh;">
-                <div class="row justify-content-center">
-                  <div class="col-12 col-md-4">
-                    <div class="card ame-formula-card">
-                      <div class="ame-formula-card-head d-flex">
-                        <div class="number-badge">1</div>
-                        <div class="ame-formula-head-text">Kratorq</div>
-                      </div>
-                      <div class="ame-formula-countdown-wrapper">
-                        <div class="ame-formula-countdown" id="countdown"></div>
-                      </div>  
-                    </div>
-                  </div>
-                </div>
+            <div class="speedometer-wrapper-desktop d-none d-md-block">
+              <div id="speedometer" class="speedometer"></div>
+              <div id="needle" class="needle"></div>
+              <div id="trip" class="trip">
+                  <div class="number">0</div><div class="number">0</div>
+                  <div class="number">0</div><div class="number">0</div>
+                  <div class="number">0</div><div class="number">0</div>
+              </div>
+              <div class="trip-desc">
+                  <div class="desc">Days</div>
+                  <div class="desc">Hours</div>
+                  <div class="desc">Mins</div>
+              </div>
+            </div>
+            <div class="speedometer-wrapper-mobile d-block d-md-none">
+              <div id="speedometer" class="speedometer"></div>
+              <div id="needle-m" class="needle"></div>
+              <div id="trip-m" class="trip">
+                  <div class="number">0</div><div class="number">0</div>
+                  <div class="number">0</div><div class="number">0</div>
+                  <div class="number">0</div><div class="number">0</div>
+              </div>
+              <div class="trip-desc">
+                  <div class="desc">Days</div>
+                  <div class="desc">Hours</div>
+                  <div class="desc">Mins</div>
+              </div>
             </div>
           </section>
         </div>
       </div>
    </main>
+
+   
 
    <!-- Modals -->
 
@@ -94,6 +110,6 @@
   </div>
 
     <script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/speedometer.js"></script>
   </body>
 </html>
