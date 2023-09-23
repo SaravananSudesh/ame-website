@@ -13,12 +13,11 @@
 }
 
 .speedometer-wrapper-mobile{
-    scale: 0.5;
+    scale: 0.4;
     opacity: 90%;
     position: fixed;
-    margin-left: calc(28% - 28px);
-    margin-right: auto;
-    bottom: 270px;
+    right: 200px;
+    bottom: 200px;
 }
 
 .speedometer{
